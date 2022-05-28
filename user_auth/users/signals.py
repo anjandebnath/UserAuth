@@ -3,6 +3,9 @@ from django.contrib.auth.models import User
 from django.dispatch import receiver
 from .models import Profile
 
+# we will now define signals so our Profile model will be
+# automatically created/updated when we create/update User instances
+
 @receiver(post_save, sender=User)
 def create_profile(sender, instance, created, **kwargs):
     if created:

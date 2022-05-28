@@ -1,20 +1,17 @@
 from django.db import models
 from django.contrib.auth.models import User
-from django.contrib.auth.models import AbstractUser
-from django.utils.translation import gettext_lazy as _
 from PIL import Image
-
-
-# class CustomUser(AbstractUser):
-#     email = models.EmailField(_('email address'), unique=True)
 
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     image = models.ImageField(default='default.jpg', upload_to='profile_pics')
+    # adding any new field in to model it is mandatory to run the migrations
+    # make migrations update the model and migrate change the database
+    birth_date = models.DateField(null=True, blank=True)
 
     def __str__(self):
-        return f'{self.user.username} Profile'
+        return f'{self.user.username} Profile' # When print then print the name with profile
 
     def save(self, *args, **kwargs):
         super(Profile, self).save(*args, **kwargs)
