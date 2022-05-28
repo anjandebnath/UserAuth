@@ -29,7 +29,12 @@
     `python manage.py createsuperuser`
 
 # Output
+## USER ROLE
 Screen 1             |  Screen 2           |  Screen 3
 :-------------------------:|:-------------------------:|:-------------------------:
 ![Screen1](https://github.com/anjandebnath/UserAuth/blob/main/user_auth/blog/static/output/User_Profile.PNG)  |  ![Screen2](https://github.com/anjandebnath/UserAuth/blob/main/user_auth/blog/static/output/User_Signin.PNG) |  ![Screen3](https://github.com/anjandebnath/UserAuth/blob/main/user_auth/blog/static/output/User_SignUp.PNG)
 
+## ADMIN ROLE
+Screen 1             |  Screen 2 
+:-------------------------:|:-------------------------:
+![Screen1](https://github.com/anjandebnath/UserAuth/blob/main/user_auth/blog/static/output/admin_1.PNG)  |  ![Screen2](https://github.com/anjandebnath/UserAuth/blob/main/user_auth/blog/static/output/admin_2.PNG)
