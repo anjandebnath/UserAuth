@@ -13,7 +13,7 @@
 5. Create a basic sign-in page from where the pre-registered USERs can sign in using the login creds (Email & Password).
 6. USER can see the details(profile) that s/he submitted on the registration process.
 
-#Solution 
+# Solution 
 1. As per requirements since 2 roles are the concern so select Django as it supports default ADMIN section.
 2. Django has good support on authentication mechanism.
 
