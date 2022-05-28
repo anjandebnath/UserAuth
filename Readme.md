@@ -25,6 +25,8 @@
     `python manage.py makemigrations`
     `python manage.py migrate`
 4. Run server locally `python manage.py runserver`
+5. Create Superuser for ADMIN access
+    `python manage.py createsuperuser`
 
 # Output
 Screen 1             |  Screen 2           |  Screen 3

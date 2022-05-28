@@ -138,4 +138,9 @@ LOGIN_URL = 'login'
 
 
 # By default, AUTHENTICATION_BACKENDS is set to: ['django.contrib.auth.backends.ModelBackend']
-AUTHENTICATION_BACKENDS = ['users.auth_backends.EmailBackend']
+#AUTHENTICATION_BACKENDS = ['users.auth_backends.EmailBackend']
+
+AUTHENTICATION_BACKENDS = (
+    'users.auth_backends.EmailBackend',
+    'django.contrib.auth.backends.ModelBackend',
+    )
