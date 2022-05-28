@@ -3,7 +3,12 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
+from django.contrib.auth.views import LoginView
 
+from .forms import CustomAuthenticationForm
+
+class CustomLoginView(LoginView):
+    authentication_form = CustomAuthenticationForm
 
 def register(request):
     if request.method == 'POST':

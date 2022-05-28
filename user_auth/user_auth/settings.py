@@ -85,6 +85,7 @@ DATABASES = {
 }
 
 
+
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
 
@@ -134,3 +135,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 #LOGIN_REDIRECT_URL = 'blog-home'
 LOGIN_REDIRECT_URL = 'profile' # After successful login redirect to this url
 LOGIN_URL = 'login'
+
+
+# By default, AUTHENTICATION_BACKENDS is set to: ['django.contrib.auth.backends.ModelBackend']
+AUTHENTICATION_BACKENDS = ['users.auth_backends.EmailBackend']
