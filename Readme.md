@@ -26,3 +26,8 @@
     `python manage.py migrate`
 4. Run server locally `python manage.py runserver`
 
+# Output
+Screen 1             |  Screen 2           |  Screen 3
+:-------------------------:|:-------------------------:|:-------------------------:
+![Screen1](https://github.com/anjandebnath/UserAuth/blob/main/user_auth/blog/static/output/User_Profile.PNG)  |  ![Screen2](https://github.com/anjandebnath/UserAuth/blob/main/user_auth/blog/static/output/User_Signin.PNG) |  ![Screen3](https://github.com/anjandebnath/UserAuth/blob/main/user_auth/blog/static/output/User_SignUp.PNG)
+
