@@ -1,4 +1,4 @@
-from email import message
+
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -7,8 +7,10 @@ from django.contrib.auth.views import LoginView
 
 from .forms import CustomAuthenticationForm
 
+
 class CustomLoginView(LoginView):
     authentication_form = CustomAuthenticationForm
+
 
 def register(request):
     if request.method == 'POST':
@@ -16,6 +18,7 @@ def register(request):
         if form.is_valid():
             user = form.save()
             user.refresh_from_db() # load the profile instance created by the signal
+            #user.profile.image = form.cleaned_data.get('profile_image')
             user.profile.birth_date = form.cleaned_data.get('birth_date')
             user.save()
             username = form.cleaned_data.get('username')
@@ -24,6 +27,7 @@ def register(request):
     else:
         form = UserRegisterForm()    
     return render(request, 'users/register.html', {'form':form})
+
 
 @login_required
 def profile(request):
@@ -41,7 +45,6 @@ def profile(request):
     else:
         u_form = UserUpdateForm(instance=request.user)
         p_form = ProfileUpdateForm(instance=request.user.profile)
-
 
     context = {
         'u_form': u_form,

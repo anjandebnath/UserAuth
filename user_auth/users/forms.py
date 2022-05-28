@@ -6,12 +6,13 @@ from .models import Profile
 
 class UserRegisterForm(UserCreationForm):
     email = forms.EmailField()
-    # profile_image = forms.FileField()
+    #profile_image = forms.FileField()
     birth_date = forms.DateField(help_text='Required. Format: YYYY-MM-DD')
 
     class Meta:
         model = User
         fields = ['username', 'email', 'birth_date', 'password1', 'password2']
+
 
 # This will allow to update user name and email
 class UserUpdateForm(forms.ModelForm):
@@ -21,11 +22,13 @@ class UserUpdateForm(forms.ModelForm):
         model = User
         fields = ['username', 'email']
 
+
 # This will allow to update profile image
 class ProfileUpdateForm(forms.ModelForm):
     class Meta:
         model = Profile
         fields = ['image']
+
 
 # Change username label to Email
 class CustomAuthenticationForm(AuthenticationForm):
